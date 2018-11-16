@@ -17,9 +17,11 @@ import org.apache.lucene.index.IndexWriter;
  **/
 public class TxtFileIndexer {
     public static void main(String[] args) throws Exception {
-//indexDir is the directory that hosts Lucene's index files
+
+        //存放索引目录
         File indexDir = new File("/opt/lucene/index");
-//dataDir is the directory that hosts the text files that to be indexed
+
+        //数据资源目录
         File dataDir = new File("/opt/lucene/data");
         Analyzer luceneAnalyzer = new StandardAnalyzer();
         File[] dataFiles = dataDir.listFiles();
